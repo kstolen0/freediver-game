@@ -14,3 +14,7 @@ config/name="freediver"
 run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.0482871, 0.200064, 0.398475, 1)
