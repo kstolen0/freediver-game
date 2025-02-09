@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://co2pahc3mq4kh"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_dy6f6"]
+[ext_resource type="Texture2D" uid="uid://cif0hitbswri0" path="res://diver.png" id="2_v1yla"]
+
+[node name="root" type="Node2D"]
+
+[node name="player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_dy6f6")
+
+[node name="player-collision" type="CollisionShape2D" parent="player"]
+
+[node name="Diver" type="Sprite2D" parent="player"]
+position = Vector2(-3, 0)
+texture = ExtResource("2_v1yla")
+
+[node name="Camera2D" type="Camera2D" parent="."]
