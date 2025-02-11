@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://4nu4hruqpdfa"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_86ldc"]
+[ext_resource type="Texture2D" uid="uid://cgt0xskisivf1" path="res://diver-sheet.png" id="2_ql83x"]
+
+[sub_resource type="Animation" id="Animation_llphg"]
+resource_name = "left_leg"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Diver-sheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_o8j5a"]
+resource_name = "neutral"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Diver-sheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3xe2v"]
+resource_name = "right_leg"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Diver-sheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6c8y7"]
+_data = {
+"left_leg": SubResource("Animation_llphg"),
+"neutral": SubResource("Animation_o8j5a"),
+"right_leg": SubResource("Animation_3xe2v")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0v11"]
+size = Vector2(119, 24)
+
+[node name="player" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_86ldc")
+
+[node name="Diver-sheet" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1, 0)
+texture = ExtResource("2_ql83x")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Diver-sheet"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_6c8y7")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_n0v11")

@@ -9,8 +9,18 @@ var acceleration = Vector2(0,0)
 var leg_force = Vector2(1, 1)
 var left_leg = leg_force
 var right_leg = leg_force
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+var submerged = false
+
+func _ready():
+	print("player loaded")
+	add_to_group("Player")
 
 func _physics_process(delta):
+	if !submerged:
+		velocity.y += gravity * delta / 2
+		
 	var animation_to_play = "neutral"
 	if Input.is_key_pressed(KEY_F):
 		left_leg = apply_force(left_leg)
@@ -18,7 +28,7 @@ func _physics_process(delta):
 	else:
 		left_leg = recover_leg(left_leg)
 		
-	if Input.is_key_pressed(KEY_P):
+	if Input.is_key_pressed(KEY_P) && !Input.is_key_pressed(KEY_F):
 		right_leg = apply_force(right_leg)
 		animation_to_play = "right_leg"
 	else:

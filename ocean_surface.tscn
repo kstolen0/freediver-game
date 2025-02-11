@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3ll8udtxwb5k"]
+
+[ext_resource type="Script" path="res://ocean_surface.gd" id="1_xt8cg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_walym"]
+size = Vector2(2699, 733)
+
+[node name="ocean-surface" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_xt8cg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1354.0
+offset_top = -241.0
+offset_right = 1342.0
+offset_bottom = 512.0
+color = Color(0, 0.156863, 1, 0.341176)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 142.5)
+shape = SubResource("RectangleShape2D_walym")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

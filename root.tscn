@@ -1,79 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://co2pahc3mq4kh"]
+[gd_scene load_steps=3 format=3 uid="uid://co2pahc3mq4kh"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_dy6f6"]
-[ext_resource type="Texture2D" uid="uid://cgt0xskisivf1" path="res://diver-sheet.png" id="2_e2a56"]
-
-[sub_resource type="Animation" id="Animation_llphg"]
-resource_name = "left_leg"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player/Diver-sheet:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_3xe2v"]
-resource_name = "right_leg"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player/Diver-sheet:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 2]
-}
-
-[sub_resource type="Animation" id="Animation_o8j5a"]
-resource_name = "neutral"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player/Diver-sheet:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6c8y7"]
-_data = {
-"left_leg": SubResource("Animation_llphg"),
-"neutral": SubResource("Animation_o8j5a"),
-"right_leg": SubResource("Animation_3xe2v")
-}
+[ext_resource type="PackedScene" uid="uid://4nu4hruqpdfa" path="res://player.tscn" id="1_8hcbp"]
+[ext_resource type="PackedScene" uid="uid://c3ll8udtxwb5k" path="res://ocean_surface.tscn" id="2_yat5b"]
 
 [node name="root" type="Node2D"]
 
-[node name="player" type="CharacterBody2D" parent="."]
-script = ExtResource("1_dy6f6")
-
-[node name="Diver-sheet" type="Sprite2D" parent="player"]
-texture_filter = 1
-position = Vector2(-1, 0)
-texture = ExtResource("2_e2a56")
-hframes = 3
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="player/Diver-sheet"]
-root_node = NodePath("../../..")
-libraries = {
-"": SubResource("AnimationLibrary_6c8y7")
-}
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="player" parent="." instance=ExtResource("1_8hcbp")]
+position = Vector2(2, -90)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
+position = Vector2(-1, 0)
+
+[node name="ocean-surface" parent="." instance=ExtResource("2_yat5b")]
+position = Vector2(-39, 233)
