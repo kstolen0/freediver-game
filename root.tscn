@@ -6,6 +6,16 @@
 
 [node name="root" type="Node2D"]
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -1356.0
+offset_top = -1325.0
+offset_right = -1219.0
+offset_bottom = -1243.0
+text = "A/D - kick
+Hf/L - turn
+Q - flip
+"
+
 [node name="player" parent="." instance=ExtResource("1_8hcbp")]
 position = Vector2(-1590, -2374)
 
@@ -16,50 +26,53 @@ position = Vector2(1, 1)
 position = Vector2(-194, -685)
 rotation = 0.0520165
 
-[node name="sand" parent="." instance=ExtResource("2_gxsnd")]
-position = Vector2(-1569, -882)
-rotation = 0.223247
-
-[node name="sand4" parent="." instance=ExtResource("2_gxsnd")]
-position = Vector2(2562, -239)
-rotation = 0.0661813
-
-[node name="sand3" parent="." instance=ExtResource("2_gxsnd")]
-position = Vector2(1177, -469)
-rotation = 0.260165
-
-[node name="sand5" parent="." instance=ExtResource("2_gxsnd")]
-position = Vector2(4846, -346)
-rotation = -0.19791
-
-[node name="sand7" parent="." instance=ExtResource("2_gxsnd")]
-position = Vector2(-2949, -1086)
-rotation = 0.0594911
-
-[node name="sand8" parent="." instance=ExtResource("2_gxsnd")]
-position = Vector2(3079, 471)
-rotation = -1.57032
-
-[node name="sand6" parent="." instance=ExtResource("2_gxsnd")]
-position = Vector2(6088, -875)
-rotation = -0.620652
-
-[node name="sand9" parent="." instance=ExtResource("2_gxsnd")]
-position = Vector2(4176, 460)
-rotation = -1.56337
+[node name="sand" parent="sand2" instance=ExtResource("2_gxsnd")]
+position = Vector2(-1383.38, -125.243)
+rotation = 0.17123
 scale = Vector2(1, 1)
+
+[node name="sand4" parent="sand2" instance=ExtResource("2_gxsnd")]
+position = Vector2(2775.46, 302.104)
+rotation = 0.0141647
+scale = Vector2(1, 1)
+
+[node name="sand3" parent="sand2" instance=ExtResource("2_gxsnd")]
+position = Vector2(1380.38, 144.425)
+rotation = 0.208148
+
+[node name="sand5" parent="sand2" instance=ExtResource("2_gxsnd")]
+position = Vector2(5050.81, 76.4963)
+rotation = -0.249927
+
+[node name="sand7" parent="sand2" instance=ExtResource("2_gxsnd")]
+position = Vector2(-2772.12, -257.217)
+rotation = 0.00747456
+scale = Vector2(1, 1)
+
+[node name="sand8" parent="sand2" instance=ExtResource("2_gxsnd")]
+position = Vector2(3328.68, 984.263)
+rotation = -1.62234
+scale = Vector2(1, 1)
+
+[node name="sand6" parent="sand2" instance=ExtResource("2_gxsnd")]
+position = Vector2(6263.62, -516.364)
+rotation = -0.672669
+
+[node name="sand9" parent="sand2" instance=ExtResource("2_gxsnd")]
+position = Vector2(4423.62, 916.242)
+rotation = -1.61538
 
 [node name="ocean-surface" parent="." instance=ExtResource("2_yat5b")]
 position = Vector2(12, 1603)
 
+[node name="ocean-surface4" parent="ocean-surface" instance=ExtResource("2_yat5b")]
+position = Vector2(-129, 813)
+
+[node name="ocean-surface3" parent="ocean-surface" instance=ExtResource("2_yat5b")]
+position = Vector2(-192, 1145)
+
+[node name="ocean-surface2" parent="ocean-surface" instance=ExtResource("2_yat5b")]
+position = Vector2(-66, 481)
+
 [node name="ocean-surface" parent="ocean-surface" instance=ExtResource("2_yat5b")]
 position = Vector2(-3, 85)
-
-[node name="ocean-surface" parent="ocean-surface/ocean-surface" instance=ExtResource("2_yat5b")]
-position = Vector2(-63, 396)
-
-[node name="ocean-surface" parent="ocean-surface/ocean-surface/ocean-surface" instance=ExtResource("2_yat5b")]
-position = Vector2(-63, 332)
-
-[node name="ocean-surface" parent="ocean-surface/ocean-surface/ocean-surface/ocean-surface" instance=ExtResource("2_yat5b")]
-position = Vector2(-63, 332)

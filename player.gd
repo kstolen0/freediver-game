@@ -28,13 +28,13 @@ func _physics_process(delta):
 	
 		
 	var animation_to_play = "neutral"
-	if Input.is_key_pressed(KEY_F):
+	if Input.is_key_pressed(KEY_A):
 		left_leg = apply_force(left_leg)
 		animation_to_play = "left_leg"
 	else:
 		left_leg = recover_leg(left_leg)
 		
-	if Input.is_key_pressed(KEY_P) && !Input.is_key_pressed(KEY_F):
+	if Input.is_key_pressed(KEY_D) && !Input.is_key_pressed(KEY_A):
 		right_leg = apply_force(right_leg)
 		animation_to_play = "right_leg"
 	else:
@@ -44,7 +44,7 @@ func _physics_process(delta):
 	if Input.is_key_pressed(KEY_L):
 		heading += r
 		rotate(r)
-	if Input.is_key_pressed(KEY_U):
+	if Input.is_key_pressed(KEY_H):
 		heading -= r
 		rotate(-r)
 	
