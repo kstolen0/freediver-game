@@ -1,15 +1,27 @@
 [gd_scene load_steps=3 format=3 uid="uid://co2pahc3mq4kh"]
 
 [ext_resource type="PackedScene" uid="uid://4nu4hruqpdfa" path="res://player.tscn" id="1_8hcbp"]
-[ext_resource type="PackedScene" uid="uid://c3ll8udtxwb5k" path="res://ocean_surface.tscn" id="2_yat5b"]
+[ext_resource type="PackedScene" uid="uid://c3ll8udtxwb5k" path="res://ocean.tscn" id="2_yat5b"]
 
 [node name="root" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_8hcbp")]
-position = Vector2(2, -90)
+position = Vector2(13, -1246)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1, 0)
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(1, 1)
 
 [node name="ocean-surface" parent="." instance=ExtResource("2_yat5b")]
-position = Vector2(-39, 233)
+position = Vector2(12, 1603)
+
+[node name="ocean-surface" parent="ocean-surface" instance=ExtResource("2_yat5b")]
+position = Vector2(-3, 85)
+
+[node name="ocean-surface" parent="ocean-surface/ocean-surface" instance=ExtResource("2_yat5b")]
+position = Vector2(-63, 396)
+
+[node name="ocean-surface" parent="ocean-surface/ocean-surface/ocean-surface" instance=ExtResource("2_yat5b")]
+position = Vector2(-63, 332)
+
+[node name="ocean-surface" parent="ocean-surface/ocean-surface/ocean-surface/ocean-surface" instance=ExtResource("2_yat5b")]
+position = Vector2(-63, 332)

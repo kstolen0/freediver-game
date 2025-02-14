@@ -4,22 +4,28 @@ extends CharacterBody2D
 var heading = 0.0
 var player_rotation = 0.03
 var acceleration = Vector2(0,0)
+var buoyancy = 3
 
 
 var leg_force = Vector2(1, 1)
 var left_leg = leg_force
 var right_leg = leg_force
+var flip_flag = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var submerged = false
+
+var submerged = -1
 
 func _ready():
 	print("player loaded")
 	add_to_group("Player")
 
 func _physics_process(delta):
-	if !submerged:
+	if submerged < 0:
 		velocity.y += gravity * delta / 2
+	elif submerged > 0:
+		velocity.y -= buoyancy - submerged
+	
 		
 	var animation_to_play = "neutral"
 	if Input.is_key_pressed(KEY_F):
@@ -41,11 +47,16 @@ func _physics_process(delta):
 	if Input.is_key_pressed(KEY_U):
 		heading -= r
 		rotate(-r)
-		
-	velocity *= Vector2(0.95,0.95)
+	
+	velocity *= Vector2(0.97,0.97)
 	
 	$"Diver-sheet/AnimationPlayer".play(animation_to_play)
+	
 	move_and_slide()
+	
+func _input(event):
+	if Input.is_action_just_pressed("flip_diver"):
+		$"Diver-sheet".scale.y = -$"Diver-sheet".scale.y
 	
 func apply_force(leg: Vector2):
 		var force = Vector2.from_angle(heading)
@@ -57,5 +68,5 @@ func apply_force(leg: Vector2):
 		
 func recover_leg(leg: Vector2):
 	if leg < leg_force:
-		leg += Vector2(0.1, 0.1)
+		leg += Vector2(0.08, 0.08)
 	return leg
