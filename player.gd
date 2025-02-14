@@ -22,7 +22,7 @@ func _ready():
 
 func _physics_process(delta):
 	if submerged < 0:
-		velocity.y += gravity * delta / 2
+		velocity.y += gravity * delta * 0.8
 	elif submerged > 0:
 		velocity.y -= buoyancy - submerged
 	
