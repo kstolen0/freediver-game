@@ -1,15 +1,53 @@
-[gd_scene load_steps=3 format=3 uid="uid://co2pahc3mq4kh"]
+[gd_scene load_steps=4 format=3 uid="uid://co2pahc3mq4kh"]
 
 [ext_resource type="PackedScene" uid="uid://4nu4hruqpdfa" path="res://player.tscn" id="1_8hcbp"]
+[ext_resource type="PackedScene" uid="uid://dbglmn4fd7dxd" path="res://sand.tscn" id="2_gxsnd"]
 [ext_resource type="PackedScene" uid="uid://c3ll8udtxwb5k" path="res://ocean.tscn" id="2_yat5b"]
 
 [node name="root" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_8hcbp")]
-position = Vector2(13, -1246)
+position = Vector2(-1590, -2374)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(1, 1)
+
+[node name="sand2" parent="." instance=ExtResource("2_gxsnd")]
+position = Vector2(-194, -685)
+rotation = 0.0520165
+
+[node name="sand" parent="." instance=ExtResource("2_gxsnd")]
+position = Vector2(-1569, -882)
+rotation = 0.223247
+
+[node name="sand4" parent="." instance=ExtResource("2_gxsnd")]
+position = Vector2(2562, -239)
+rotation = 0.0661813
+
+[node name="sand3" parent="." instance=ExtResource("2_gxsnd")]
+position = Vector2(1177, -469)
+rotation = 0.260165
+
+[node name="sand5" parent="." instance=ExtResource("2_gxsnd")]
+position = Vector2(4846, -346)
+rotation = -0.19791
+
+[node name="sand7" parent="." instance=ExtResource("2_gxsnd")]
+position = Vector2(-2949, -1086)
+rotation = 0.0594911
+
+[node name="sand8" parent="." instance=ExtResource("2_gxsnd")]
+position = Vector2(3079, 471)
+rotation = -1.57032
+
+[node name="sand6" parent="." instance=ExtResource("2_gxsnd")]
+position = Vector2(6088, -875)
+rotation = -0.620652
+
+[node name="sand9" parent="." instance=ExtResource("2_gxsnd")]
+position = Vector2(4176, 460)
+rotation = -1.56337
+scale = Vector2(1, 1)
 
 [node name="ocean-surface" parent="." instance=ExtResource("2_yat5b")]
 position = Vector2(12, 1603)

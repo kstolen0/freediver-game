@@ -60,7 +60,7 @@ _data = {
 size = Vector2(57.5, 24)
 
 [node name="player" type="CharacterBody2D"]
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_86ldc")
 
 [node name="Diver-sheet" type="Sprite2D" parent="."]
