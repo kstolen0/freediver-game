@@ -13,14 +13,13 @@ script = ExtResource("1_xt8cg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("CanvasItemMaterial_v0q8b")
-offset_left = -6184.0
-offset_top = -2696.0
-offset_right = 6697.0
-offset_bottom = 505.0
+offset_left = -6178.0
+offset_top = -2672.0
+offset_right = 6703.0
+offset_bottom = 529.0
 color = Color(0.0156863, 0.282353, 0.996078, 0.231373)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(262, -1096.25)
 shape = SubResource("RectangleShape2D_walym")
 

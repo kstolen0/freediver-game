@@ -1,10 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://co2pahc3mq4kh"]
+[gd_scene load_steps=5 format=3 uid="uid://co2pahc3mq4kh"]
 
 [ext_resource type="PackedScene" uid="uid://4nu4hruqpdfa" path="res://player.tscn" id="1_8hcbp"]
 [ext_resource type="PackedScene" uid="uid://dbglmn4fd7dxd" path="res://sand.tscn" id="2_gxsnd"]
 [ext_resource type="PackedScene" uid="uid://c3ll8udtxwb5k" path="res://ocean.tscn" id="2_yat5b"]
+[ext_resource type="PackedScene" uid="uid://bxy8xhydg8jl2" path="res://breath_bar.tscn" id="4_upb3n"]
 
 [node name="root" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="breath" parent="CanvasLayer" instance=ExtResource("4_upb3n")]
+offset_left = 31.5
+offset_top = 30.0
+offset_right = 146.5
+offset_bottom = 41.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = -1356.0
@@ -17,24 +28,23 @@ Q - flip
 "
 
 [node name="player" parent="." instance=ExtResource("1_8hcbp")]
-position = Vector2(-1590, -2374)
+position = Vector2(491, 364)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(1, 1)
+zoom = Vector2(2, 2)
 
 [node name="sand2" parent="." instance=ExtResource("2_gxsnd")]
-position = Vector2(-194, -685)
+position = Vector2(647, 2060)
 rotation = 0.0520165
 
 [node name="sand" parent="sand2" instance=ExtResource("2_gxsnd")]
 position = Vector2(-1383.38, -125.243)
 rotation = 0.17123
-scale = Vector2(1, 1)
 
 [node name="sand4" parent="sand2" instance=ExtResource("2_gxsnd")]
 position = Vector2(2775.46, 302.104)
 rotation = 0.0141647
-scale = Vector2(1, 1)
 
 [node name="sand3" parent="sand2" instance=ExtResource("2_gxsnd")]
 position = Vector2(1380.38, 144.425)
@@ -47,12 +57,10 @@ rotation = -0.249927
 [node name="sand7" parent="sand2" instance=ExtResource("2_gxsnd")]
 position = Vector2(-2772.12, -257.217)
 rotation = 0.00747456
-scale = Vector2(1, 1)
 
 [node name="sand8" parent="sand2" instance=ExtResource("2_gxsnd")]
 position = Vector2(3328.68, 984.263)
 rotation = -1.62234
-scale = Vector2(1, 1)
 
 [node name="sand6" parent="sand2" instance=ExtResource("2_gxsnd")]
 position = Vector2(6263.62, -516.364)
@@ -63,7 +71,7 @@ position = Vector2(4423.62, 916.242)
 rotation = -1.61538
 
 [node name="ocean-surface" parent="." instance=ExtResource("2_yat5b")]
-position = Vector2(12, 1603)
+position = Vector2(853, 4348)
 
 [node name="ocean-surface4" parent="ocean-surface" instance=ExtResource("2_yat5b")]
 position = Vector2(-129, 813)
@@ -75,4 +83,4 @@ position = Vector2(-192, 1145)
 position = Vector2(-66, 481)
 
 [node name="ocean-surface" parent="ocean-surface" instance=ExtResource("2_yat5b")]
-position = Vector2(-3, 85)
+position = Vector2(-3, 21)
