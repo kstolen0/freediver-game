@@ -18,12 +18,12 @@ offset_right = 146.5
 offset_bottom = 41.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -1356.0
-offset_top = -1325.0
-offset_right = -1219.0
-offset_bottom = -1243.0
+offset_left = 368.0
+offset_top = 1532.0
+offset_right = 505.0
+offset_bottom = 1614.0
 text = "A/D - kick
-Hf/L - turn
+H/L - turn
 Q - flip
 "
 
