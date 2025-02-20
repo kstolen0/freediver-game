@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://co2pahc3mq4kh"]
+[gd_scene load_steps=6 format=3 uid="uid://co2pahc3mq4kh"]
 
 [ext_resource type="PackedScene" uid="uid://4nu4hruqpdfa" path="res://player.tscn" id="1_8hcbp"]
 [ext_resource type="PackedScene" uid="uid://dbglmn4fd7dxd" path="res://sand.tscn" id="2_gxsnd"]
 [ext_resource type="PackedScene" uid="uid://c3ll8udtxwb5k" path="res://ocean.tscn" id="2_yat5b"]
 [ext_resource type="PackedScene" uid="uid://bxy8xhydg8jl2" path="res://breath_bar.tscn" id="4_upb3n"]
+[ext_resource type="PackedScene" uid="uid://cvcuw6wh2kmbu" path="res://seagull.tscn" id="5_wlr40"]
 
 [node name="root" type="Node2D"]
 
@@ -70,6 +71,9 @@ rotation = -0.672669
 position = Vector2(4423.62, 916.242)
 rotation = -1.61538
 
+[node name="gull" parent="." instance=ExtResource("5_wlr40")]
+position = Vector2(958, 1613)
+
 [node name="ocean-surface" parent="." instance=ExtResource("2_yat5b")]
 position = Vector2(853, 4348)
 
@@ -84,3 +88,9 @@ position = Vector2(-66, 481)
 
 [node name="ocean-surface" parent="ocean-surface" instance=ExtResource("2_yat5b")]
 position = Vector2(-3, 21)
+
+[node name="gull2" parent="." instance=ExtResource("5_wlr40")]
+position = Vector2(599, 1547)
+
+[node name="gull3" parent="." instance=ExtResource("5_wlr40")]
+position = Vector2(731, 1636)

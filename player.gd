@@ -16,6 +16,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 signal holding_breath
 signal recovering_breath
+signal on_water
 var can_breath = true
 var is_alive = true
 

@@ -153,7 +153,6 @@ shape = SubResource("RectangleShape2D_n0v11")
 texture_filter = 1
 texture = ExtResource("3_3mdv6")
 hframes = 4
-frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Diver-sheet"]
 libraries = {
