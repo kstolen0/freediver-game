@@ -99,23 +99,25 @@ libraries = {
 "": SubResource("AnimationLibrary_x4ms0")
 }
 
-[node name="turn_timer" type="Timer" parent="."]
+[node name="timers" type="Node2D" parent="."]
+
+[node name="turn_timer" type="Timer" parent="timers"]
 wait_time = 3.0
 
-[node name="animation_timer" type="Timer" parent="."]
+[node name="animation_timer" type="Timer" parent="timers"]
 
-[node name="land_timer" type="Timer" parent="."]
+[node name="land_timer" type="Timer" parent="timers"]
 wait_time = 10.0
 one_shot = true
 
-[node name="flight_timer" type="Timer" parent="."]
+[node name="flight_timer" type="Timer" parent="timers"]
 one_shot = true
 
-[node name="cruise_timer" type="Timer" parent="."]
+[node name="cruise_timer" type="Timer" parent="timers"]
 one_shot = true
 
-[connection signal="timeout" from="turn_timer" to="." method="_on_turn_timer_timeout"]
-[connection signal="timeout" from="animation_timer" to="." method="_on_animation_timer_timeout"]
-[connection signal="timeout" from="land_timer" to="." method="_on_land_timer_timeout"]
-[connection signal="timeout" from="flight_timer" to="." method="_on_flight_timer_timeout"]
-[connection signal="timeout" from="cruise_timer" to="." method="_on_cruise_timer_timeout"]
+[connection signal="timeout" from="timers/turn_timer" to="." method="_on_turn_timer_timeout"]
+[connection signal="timeout" from="timers/animation_timer" to="." method="_on_animation_timer_timeout"]
+[connection signal="timeout" from="timers/land_timer" to="." method="_on_land_timer_timeout"]
+[connection signal="timeout" from="timers/flight_timer" to="." method="_on_flight_timer_timeout"]
+[connection signal="timeout" from="timers/cruise_timer" to="." method="_on_cruise_timer_timeout"]
