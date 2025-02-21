@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bxy8xhydg8jl2"]
 
-[ext_resource type="Script" path="res://breath_bar.gd" id="1_xff61"]
+[ext_resource type="Script" path="res://ui/breath_bar.gd" id="1_xff61"]
 
 [node name="Node2D" type="ProgressBar"]
 offset_top = -11.0

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfae0l585hipp"
-path="res://.godot/imported/diver-sheet-64.png-686323429890ee6f3608fdbda760a8e2.ctex"
+path="res://.godot/imported/diver-sheet-64.png-cb5ce695e25786049f0fadee148a2dba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://diver-sheet-64.png"
-dest_files=["res://.godot/imported/diver-sheet-64.png-686323429890ee6f3608fdbda760a8e2.ctex"]
+source_file="res://player/diver-sheet-64.png"
+dest_files=["res://.godot/imported/diver-sheet-64.png-cb5ce695e25786049f0fadee148a2dba.ctex"]
 
 [params]
 

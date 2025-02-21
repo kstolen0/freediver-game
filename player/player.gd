@@ -24,7 +24,7 @@ var submerged = -1
 
 func _ready():
 	print("player loaded")
-	add_to_group("Player")
+	add_to_group("player")
 	$"../CanvasLayer/breath".out_of_breath.connect(unalive)
 
 func unalive(toggle):

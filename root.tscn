@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://co2pahc3mq4kh"]
 
-[ext_resource type="PackedScene" uid="uid://4nu4hruqpdfa" path="res://player.tscn" id="1_8hcbp"]
-[ext_resource type="PackedScene" uid="uid://dbglmn4fd7dxd" path="res://sand.tscn" id="2_gxsnd"]
-[ext_resource type="PackedScene" uid="uid://c3ll8udtxwb5k" path="res://ocean.tscn" id="2_yat5b"]
-[ext_resource type="PackedScene" uid="uid://bxy8xhydg8jl2" path="res://breath_bar.tscn" id="4_upb3n"]
-[ext_resource type="PackedScene" uid="uid://cvcuw6wh2kmbu" path="res://seagull.tscn" id="5_wlr40"]
+[ext_resource type="PackedScene" uid="uid://4nu4hruqpdfa" path="res://player/player.tscn" id="1_8hcbp"]
+[ext_resource type="PackedScene" uid="uid://dbglmn4fd7dxd" path="res://terrain/sand/sand.tscn" id="2_gxsnd"]
+[ext_resource type="PackedScene" uid="uid://c3ll8udtxwb5k" path="res://terrain/ocean/ocean.tscn" id="2_yat5b"]
+[ext_resource type="PackedScene" uid="uid://bxy8xhydg8jl2" path="res://ui/breath_bar.tscn" id="4_upb3n"]
+[ext_resource type="PackedScene" uid="uid://cvcuw6wh2kmbu" path="res://seagull/seagull.tscn" id="5_wlr40"]
 
 [node name="root" type="Node2D"]
 

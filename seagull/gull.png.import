@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btys3xeocorq2"
-path="res://.godot/imported/gull.png-d74104e7b0cf4360789e5b1fdd69036e.ctex"
+path="res://.godot/imported/gull.png-9fbdc905e8c021078149d9bb468a10f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gull.png"
-dest_files=["res://.godot/imported/gull.png-d74104e7b0cf4360789e5b1fdd69036e.ctex"]
+source_file="res://seagull/gull.png"
+dest_files=["res://.godot/imported/gull.png-9fbdc905e8c021078149d9bb468a10f7.ctex"]
 
 [params]
 

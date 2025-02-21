@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3ll8udtxwb5k"]
 
-[ext_resource type="Script" path="res://ocean.gd" id="1_xt8cg"]
+[ext_resource type="Script" path="res://terrain/ocean/ocean.gd" id="1_xt8cg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v0q8b"]
 
