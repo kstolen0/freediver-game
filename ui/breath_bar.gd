@@ -35,4 +35,3 @@ func recoverBreath():
 	if value < MAX_BREATH:
 		value += 0.5
 			
-
