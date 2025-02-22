@@ -36,6 +36,13 @@ position = Vector2(549, 1460)
 
 [node name="gulls" type="Node" parent="."]
 
+[node name="player" parent="." instance=ExtResource("1_8hcbp")]
+position = Vector2(-740, 1474)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(1, 1)
+zoom = Vector2(2, 2)
+
 [node name="gull" parent="." instance=ExtResource("5_wlr40")]
 position = Vector2(271, 1613)
 
@@ -44,13 +51,6 @@ position = Vector2(-31, 1547)
 
 [node name="gull3" parent="." instance=ExtResource("5_wlr40")]
 position = Vector2(-270, 1636)
-
-[node name="player" parent="." instance=ExtResource("1_8hcbp")]
-position = Vector2(-740, 1474)
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(1, 1)
-zoom = Vector2(2, 2)
 
 [node name="rocks_fg" type="TileMapLayer" parent="."]
 position = Vector2(81, -258)
@@ -126,8 +126,9 @@ position = Vector2(1860, 4829)
 position = Vector2(1867, 4365)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(0, 4000)
 scale = Vector2(2, 2)
-transform = Transform2D(2, 0, 0, 2, 0, 0)
+transform = Transform2D(2, 0, 0, 2, 0, 4000)
 
 [node name="breath" parent="CanvasLayer" instance=ExtResource("4_upb3n")]
 offset_left = 31.5
