@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://fish/fish-sm/states/fish-sm-cruise.gd" id="3_d6i8x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bad6l"]
+radius = 6.08276
 
 [sub_resource type="Animation" id="Animation_5lwch"]
 resource_name = "cruise"

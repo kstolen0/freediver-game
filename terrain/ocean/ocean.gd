@@ -7,4 +7,5 @@ func _on_body_entered(body):
 
 func _on_body_exited(body):
 	print("left ocean")
+	print(body.position)
 	body.submerged -= 1

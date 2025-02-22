@@ -22,6 +22,7 @@ func setup_turn_timer():
 	turn_timer.autostart = true
 	add_child(turn_timer)
 
+
 func turn():
 	sprite.scale.x = -sprite.scale.x
 	fish.velocity.x = initial_velocity.x * sprite.scale.x
@@ -31,7 +32,6 @@ func exit():
 	
 func process_state(delta):
 	time += delta
-	var amplitude = 0.2
+	var amplitude = 20
 	var frequency = 0.5
-	var y = sin(time * frequency) * amplitude
-	fish.position.y = fish.position.y + y
+	fish.velocity.y = sin(time * frequency) * amplitude
