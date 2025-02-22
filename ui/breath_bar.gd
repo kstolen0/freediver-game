@@ -1,6 +1,6 @@
 extends ProgressBar
 
-const MAX_BREATH = 100
+const MAX_BREATH = 50
 var modifier = 2
 var breath = MAX_BREATH / modifier
 var holding = false
@@ -11,7 +11,7 @@ signal out_of_breath(toggle)
 func _ready():	
 	max_value = MAX_BREATH
 	value = MAX_BREATH / 2
-	size = Vector2(MAX_BREATH, 10)
+	size = Vector2(MAX_BREATH, 6)
 	$"../../player".holding_breath.connect(toggleOxygen)
 	$"../../player".recovering_breath.connect(toggleOxygen)
 	$"../../player".final_breath.connect(on_final_breath)

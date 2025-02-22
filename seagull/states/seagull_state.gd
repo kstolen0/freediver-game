@@ -20,7 +20,8 @@ func process_state(delta):
 	pass
 	
 func physics_process_state(delta):
-	if (player.position - seagull.position).length() < PLAYER_DISTANCE_THRESHOLD && seagull.velocity.y >= 0:
+	var dist = (player.position - seagull.position).length()
+	if dist < PLAYER_DISTANCE_THRESHOLD  && seagull.velocity.y >= 0:
 		scared_off.emit()
 	pass
 
