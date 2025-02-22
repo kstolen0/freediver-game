@@ -17,8 +17,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 signal holding_breath
 signal recovering_breath
 signal on_water
+signal final_breath(value)
 var can_breath = true
 var is_alive = true
+var is_final_breath = true
 
 var submerged = -1
 
@@ -26,6 +28,11 @@ func _ready():
 	print("player loaded")
 	add_to_group("player")
 	$"../CanvasLayer/breath".out_of_breath.connect(unalive)
+	on_water.connect(under_water)
+
+func under_water():
+	if submerged > 0:
+		emit_signal("final_breath", "end")
 
 func unalive(toggle):
 	is_alive = !toggle
@@ -66,6 +73,15 @@ func do_alive_things(animation_to_play):
 		animation_to_play = "right_leg"
 	else:
 		right_leg = recover_leg(right_leg)
+		
+	if Input.is_key_pressed(KEY_SPACE):
+		if !is_final_breath:
+			is_final_breath = true
+			emit_signal("final_breath", "begin")
+	else:
+		if is_final_breath:
+			is_final_breath = false
+			emit_signal("final_breath", "end")
 		
 	var r = player_rotation * max(min(1, abs(velocity.length())), 0.15)
 	if Input.is_key_pressed(KEY_L):

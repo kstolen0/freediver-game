@@ -48,14 +48,16 @@ offset_right = 146.5
 offset_bottom = 41.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -885.0
-offset_top = 1527.0
-offset_right = -748.0
-offset_bottom = 1609.0
+offset_left = -884.0
+offset_top = 1519.0
+offset_right = -713.0
+offset_bottom = 1634.0
 text = "A/D - kick
 H/L - turn
 Q - flip
+SPACE - Final Breath
 "
+fit_content = true
 
 [node name="player" parent="." instance=ExtResource("1_8hcbp")]
 position = Vector2(-740, 1474)
