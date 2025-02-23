@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://co2pahc3mq4kh"]
+[gd_scene load_steps=10 format=4 uid="uid://co2pahc3mq4kh"]
 
 [ext_resource type="Script" path="res://root.gd" id="1_6pkjq"]
 [ext_resource type="PackedScene" uid="uid://4nu4hruqpdfa" path="res://player/player.tscn" id="1_8hcbp"]
@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bxy8xhydg8jl2" path="res://ui/breath_bar.tscn" id="4_upb3n"]
 [ext_resource type="PackedScene" uid="uid://cvcuw6wh2kmbu" path="res://seagull/seagull.tscn" id="5_wlr40"]
 [ext_resource type="PackedScene" uid="uid://bp0d6xqoonf2y" path="res://fish/fish-sm/fish-sm.tscn" id="7_rtvx7"]
+[ext_resource type="PackedScene" uid="uid://bt5w1raislwja" path="res://depth_change.tscn" id="9_xckeu"]
 
 [node name="world" type="Node2D"]
-position = Vector2(1073, 0)
 script = ExtResource("1_6pkjq")
 
 [node name="ricks_bg" type="TileMapLayer" parent="."]
@@ -20,22 +20,22 @@ tile_set = ExtResource("3_w85op")
 [node name="fish" type="Node" parent="."]
 
 [node name="fish-sm3" parent="fish" instance=ExtResource("7_rtvx7")]
-position = Vector2(1531, 1824)
+position = Vector2(467, 1924)
 
 [node name="fish-sm2" parent="fish" instance=ExtResource("7_rtvx7")]
-position = Vector2(1386, 1812)
+position = Vector2(288, 1809)
 
 [node name="fish-sm" parent="fish" instance=ExtResource("7_rtvx7")]
-position = Vector2(575, 1768)
+position = Vector2(-528, 1735)
 
 [node name="fish-sm4" parent="fish" instance=ExtResource("7_rtvx7")]
-position = Vector2(1038, 1686)
+position = Vector2(46, 1700)
 
 [node name="fish-sm5" parent="fish" instance=ExtResource("7_rtvx7")]
-position = Vector2(549, 1460)
+position = Vector2(-508, 1479)
 
 [node name="player" parent="." instance=ExtResource("1_8hcbp")]
-position = Vector2(-740, 1474)
+position = Vector2(-740, 1686)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(1, 1)
@@ -70,58 +70,61 @@ fit_content = true
 [node name="sand" type="Node" parent="."]
 
 [node name="sand" parent="sand" instance=ExtResource("2_gxsnd")]
-position = Vector2(345.003, 1863)
+position = Vector2(-754, 1863)
 rotation = 0.223246
 
 [node name="sand4" parent="sand" instance=ExtResource("2_gxsnd")]
-position = Vector2(4476, 2506)
+position = Vector2(3377, 2506)
 rotation = 0.0661812
 
 [node name="sand3" parent="sand" instance=ExtResource("2_gxsnd")]
-position = Vector2(3091, 2276)
+position = Vector2(1992, 2276)
 rotation = 0.260164
 
 [node name="sand5" parent="sand" instance=ExtResource("2_gxsnd")]
-position = Vector2(6760, 2399)
+position = Vector2(5661, 2399)
 rotation = -0.197911
-scale = Vector2(1, 1)
 
 [node name="sand7" parent="sand" instance=ExtResource("2_gxsnd")]
-position = Vector2(-1035, 1659)
+position = Vector2(-2134, 1659)
 rotation = 0.0594911
 
 [node name="sand8" parent="sand" instance=ExtResource("2_gxsnd")]
-position = Vector2(4993, 3216)
+position = Vector2(3894, 3216)
 rotation = -1.57032
 
 [node name="sand6" parent="sand" instance=ExtResource("2_gxsnd")]
-position = Vector2(8002, 1870)
+position = Vector2(6902.99, 1870)
 rotation = -0.620652
 
 [node name="sand9" parent="sand" instance=ExtResource("2_gxsnd")]
-position = Vector2(6090, 3205)
+position = Vector2(4991, 3205)
 rotation = -1.56336
 
 [node name="sand2" parent="sand" instance=ExtResource("2_gxsnd")]
-position = Vector2(1720, 2060)
+position = Vector2(620.997, 2060)
 rotation = 0.0520165
 
-[node name="oceans" type="Node" parent="."]
+[node name="ocean" parent="." instance=ExtResource("2_yat5b")]
+z_index = 1
+position = Vector2(2657, 1694)
 
-[node name="ocean-surface" parent="oceans" instance=ExtResource("2_yat5b")]
-position = Vector2(1926, 4348)
+[node name="depths" type="Node" parent="."]
 
-[node name="ocean-surface4" parent="oceans" instance=ExtResource("2_yat5b")]
-position = Vector2(1797, 5161)
+[node name="d2" parent="depths" instance=ExtResource("9_xckeu")]
+position = Vector2(2855, 1801)
+scale = Vector2(99.2974, 7.89568)
+depth = 2
 
-[node name="ocean-surface3" parent="oceans" instance=ExtResource("2_yat5b")]
-position = Vector2(1734, 5493)
+[node name="d3" parent="depths" instance=ExtResource("9_xckeu")]
+position = Vector2(2854, 1905)
+scale = Vector2(90, 1.921)
+depth = 3
 
-[node name="ocean-surface2" parent="oceans" instance=ExtResource("2_yat5b")]
-position = Vector2(1860, 4829)
-
-[node name="ocean-surface5" parent="oceans" instance=ExtResource("2_yat5b")]
-position = Vector2(1867, 4365)
+[node name="d4" parent="depths" instance=ExtResource("9_xckeu")]
+position = Vector2(2845, 2067)
+scale = Vector2(90, 5.361)
+depth = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 scale = Vector2(2, 2)

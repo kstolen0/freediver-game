@@ -22,7 +22,7 @@ var can_breath = true
 var is_alive = true
 var is_final_breath = true
 
-var submerged = -1
+var depth = -1
 
 func _ready():
 	print("player loaded")
@@ -31,7 +31,7 @@ func _ready():
 	on_water.connect(under_water)
 
 func under_water():
-	if submerged > 0:
+	if depth > 0:
 		emit_signal("final_breath", "end")
 
 func unalive(toggle):
@@ -39,16 +39,16 @@ func unalive(toggle):
 
 func _physics_process(delta):
 	var animation_to_play = "idle"
-	if submerged <= 0:
-		if submerged < 0:
+	if depth <= 0:
+		if depth < 0:
 			velocity.y += gravity * delta * 0.8
 		else:
 			animation_to_play = "surface"
 		if !can_breath:
 			can_breath = true
 			emit_signal("recovering_breath")
-	elif submerged > 0:
-		velocity.y -= (buoyancy - submerged) * 0.5
+	elif depth > 0:
+		velocity.y -= (buoyancy - depth) * 0.5
 		if can_breath:
 			can_breath = false
 			emit_signal("holding_breath")

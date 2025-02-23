@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Seagull
 
-var submerged = 0
+var depth = 0
 
 signal on_water
 
