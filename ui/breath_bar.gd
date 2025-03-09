@@ -1,11 +1,12 @@
 extends ProgressBar
 
-const MAX_BREATH = 50
+const MAX_BREATH = 100
 var modifier = 2
 var breath = MAX_BREATH / modifier
 var holding = false
 var sent_death_signal = false
 signal out_of_breath(toggle)
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
@@ -15,6 +16,7 @@ func _ready():
 	$"../../player".holding_breath.connect(toggleOxygen)
 	$"../../player".recovering_breath.connect(toggleOxygen)
 	$"../../player".final_breath.connect(on_final_breath)
+	audio_stream_player_2d.play()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -31,6 +33,11 @@ func _process(delta):
 		recoverBreath()
 	
 func toggleOxygen():
+	print("holding is ", holding)
+	if !holding:
+		audio_stream_player_2d.volume_db = 10
+	else:
+		audio_stream_player_2d.volume_db = 1
 	holding = !holding
 	
 func on_final_breath(state):

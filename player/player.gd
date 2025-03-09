@@ -6,8 +6,6 @@ var player_rotation = 0.03
 var acceleration = Vector2(0,0)
 var buoyancy = 3
 
-
-
 var leg_force = Vector2(1, 1)
 var left_leg = leg_force
 var right_leg = leg_force
