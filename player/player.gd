@@ -11,6 +11,7 @@ var left_leg = leg_force
 var right_leg = leg_force
 var flip_flag = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready var speargun: Area2D = $speargun
 
 signal holding_breath
 signal recovering_breath
@@ -98,6 +99,7 @@ func do_alive_things(animation_to_play):
 func _input(event):
 	if Input.is_action_just_pressed("flip_diver"):
 		$"Diver-sheet".scale.y = -$"Diver-sheet".scale.y
+		speargun.scale.y = -speargun.scale.y
 		flip_flag = !flip_flag
 	
 func apply_force(leg: Vector2):
