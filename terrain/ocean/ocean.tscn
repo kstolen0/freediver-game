@@ -10,7 +10,7 @@ shader = ExtResource("2_x8x3x")
 shader_parameter/gradient = ExtResource("3_pekm6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_walym"]
-size = Vector2(12876, 3153.5)
+size = Vector2(12876, 1564.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbuv0"]
 size = Vector2(33.1003, 20.5555)
@@ -24,11 +24,11 @@ material = SubResource("ShaderMaterial_0186f")
 offset_left = -6427.0
 offset_top = -1.0
 offset_right = 6454.0
-offset_bottom = 3200.0
+offset_bottom = 1557.0
 pivot_offset = Vector2(6427, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1580)
+position = Vector2(0, 785.625)
 shape = SubResource("RectangleShape2D_walym")
 
 [node name="shallows" type="Area2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://co2pahc3mq4kh"]
+[gd_scene load_steps=10 format=4 uid="uid://co2pahc3mq4kh"]
 
 [ext_resource type="Script" path="res://root.gd" id="1_6pkjq"]
 [ext_resource type="PackedScene" uid="uid://4nu4hruqpdfa" path="res://player/player.tscn" id="1_8hcbp"]
@@ -9,16 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://cvcuw6wh2kmbu" path="res://seagull/seagull.tscn" id="5_wlr40"]
 [ext_resource type="PackedScene" uid="uid://bp0d6xqoonf2y" path="res://fish/fish-sm/fish-sm.tscn" id="7_rtvx7"]
 [ext_resource type="PackedScene" uid="uid://bt5w1raislwja" path="res://depth_change.tscn" id="9_xckeu"]
-[ext_resource type="PackedScene" uid="uid://ceqm63e8sd814" path="res://player/gear/spear/spear.tscn" id="10_teqcj"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_6pkjq")
-
-[node name="ocean2" parent="." instance=ExtResource("2_yat5b")]
-z_index = 1
-position = Vector2(5314, 3388)
-collision_layer = 0
-collision_mask = 0
 
 [node name="ricks_bg" type="TileMapLayer" parent="."]
 z_index = -2
@@ -48,7 +41,7 @@ position = Vector2(-740, 1686)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(1, 1)
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(3, 3)
 
 [node name="gull" parent="." instance=ExtResource("5_wlr40")]
 position = Vector2(271, 1613)
@@ -147,7 +140,3 @@ offset_left = 31.5
 offset_top = 30.0
 offset_right = 146.5
 offset_bottom = 41.0
-
-[node name="spear" parent="." instance=ExtResource("10_teqcj")]
-position = Vector2(153, 1875)
-rotation = 1.44807
