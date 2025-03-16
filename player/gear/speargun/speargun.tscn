@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://byfn6yry2wch1"]
 
-[ext_resource type="Script" path="res://speargun.gd" id="1_fllms"]
-[ext_resource type="Texture2D" uid="uid://b2lpf3e4alo6x" path="res://speargun.png" id="2_dt80n"]
-[ext_resource type="Texture2D" uid="uid://bgsuvdgvmuypy" path="res://spear.png" id="3_u5ukc"]
+[ext_resource type="Script" path="res://player/gear/speargun/speargun.gd" id="1_fllms"]
+[ext_resource type="Texture2D" uid="uid://b2lpf3e4alo6x" path="res://player/gear/speargun/speargun.png" id="2_dt80n"]
+[ext_resource type="Texture2D" uid="uid://bgsuvdgvmuypy" path="res://player/gear/spear/spear.png" id="3_u5ukc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8awo"]
 size = Vector2(29.75, 5.375)

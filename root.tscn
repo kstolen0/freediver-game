@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cvcuw6wh2kmbu" path="res://seagull/seagull.tscn" id="5_wlr40"]
 [ext_resource type="PackedScene" uid="uid://bp0d6xqoonf2y" path="res://fish/fish-sm/fish-sm.tscn" id="7_rtvx7"]
 [ext_resource type="PackedScene" uid="uid://bt5w1raislwja" path="res://depth_change.tscn" id="9_xckeu"]
-[ext_resource type="PackedScene" uid="uid://ceqm63e8sd814" path="res://spear.tscn" id="10_teqcj"]
+[ext_resource type="PackedScene" uid="uid://ceqm63e8sd814" path="res://player/gear/spear/spear.tscn" id="10_teqcj"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_6pkjq")

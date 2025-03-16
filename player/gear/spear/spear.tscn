@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ceqm63e8sd814"]
 
-[ext_resource type="Script" path="res://spear.gd" id="1_57cbw"]
-[ext_resource type="Texture2D" uid="uid://bgsuvdgvmuypy" path="res://spear.png" id="1_q48gs"]
+[ext_resource type="Script" path="res://player/gear/spear/spear.gd" id="1_57cbw"]
+[ext_resource type="Texture2D" uid="uid://bgsuvdgvmuypy" path="res://player/gear/spear/spear.png" id="1_q48gs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa3co"]
 size = Vector2(14, 2)
@@ -12,7 +12,7 @@ size = Vector2(16, 2)
 [node name="spear" type="CharacterBody2D"]
 z_index = -1
 collision_layer = 64
-collision_mask = 61
+collision_mask = 60
 script = ExtResource("1_57cbw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

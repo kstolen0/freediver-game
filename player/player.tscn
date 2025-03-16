@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://player/player.gd" id="1_86ldc"]
 [ext_resource type="Texture2D" uid="uid://dfae0l585hipp" path="res://player/diver-sheet-64.png" id="3_3mdv6"]
 [ext_resource type="AudioStream" uid="uid://bmy1vlshitwc7" path="res://player/heart_beat.wav" id="3_bd5e8"]
-[ext_resource type="PackedScene" uid="uid://byfn6yry2wch1" path="res://speargun.tscn" id="4_xnbmu"]
+[ext_resource type="PackedScene" uid="uid://byfn6yry2wch1" path="res://player/gear/speargun/speargun.tscn" id="4_xnbmu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0v11"]
 size = Vector2(34, 12)

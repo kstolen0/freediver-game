@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var spear_sprite: Sprite2D = $spear_sprite
 @onready var main = get_tree().get_root().get_node("world")
-@onready var spear = load("res://spear.tscn")
+@onready var spear = load("res://player/gear/spear/spear.tscn")
 var ammo = 1
 
 # Called when the node enters the scene tree for the first time.
