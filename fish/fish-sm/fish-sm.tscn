@@ -48,7 +48,7 @@ _data = {
 
 [node name="fish-sm" type="CharacterBody2D"]
 collision_layer = 32
-collision_mask = 20
+collision_mask = 84
 script = ExtResource("1_x5031")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

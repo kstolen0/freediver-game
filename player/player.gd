@@ -35,6 +35,9 @@ func under_water():
 
 func unalive(toggle):
 	is_alive = !toggle
+	
+func add_spears(amount):
+	speargun.add_spears(amount)
 
 func _physics_process(delta):
 	var animation_to_play = "idle"
@@ -101,6 +104,8 @@ func _input(event):
 		$"Diver-sheet".scale.y = -$"Diver-sheet".scale.y
 		speargun.scale.y = -speargun.scale.y
 		flip_flag = !flip_flag
+	if Input.is_action_just_pressed("left_mouse"):
+		speargun.fire()
 	
 func apply_force(leg: Vector2):
 		var force = Vector2.from_angle(heading)
