@@ -43,7 +43,7 @@ func _process(delta):
 func toggleOxygen():
 	print("holding is ", holding)
 	if !holding:
-		heart_beat.volume_db = 10
+		heart_beat.volume_db = 8
 		veins.volume_db = 20
 	else:
 		heart_beat.volume_db = 2
@@ -58,7 +58,10 @@ func on_final_breath(state):
 	
 func recoverBreath():
 	if value < MAX_BREATH / modifier:
-		value += 0.5
+		if value > MAX_BREATH / modifier * 0.7:
+			value += 0.2
+		else:
+			value += 0.5
 		return
 		
 	if modifier == 1 && value >= MAX_BREATH / modifier:

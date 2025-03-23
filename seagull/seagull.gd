@@ -9,6 +9,7 @@ signal on_water
 # player
 
 func _ready():
+	add_to_group("birds")
 	pass
 	
 func _physics_process(delta):
