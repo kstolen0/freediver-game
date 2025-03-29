@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ceqm63e8sd814"]
 
-[ext_resource type="Script" path="res://player/gear/spear/spear.gd" id="1_57cbw"]
+[ext_resource type="Script" uid="uid://cr2ykk0x6mfgo" path="res://player/gear/spear/spear.gd" id="1_57cbw"]
 [ext_resource type="Texture2D" uid="uid://bgsuvdgvmuypy" path="res://player/gear/spear/spear.png" id="1_q48gs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa3co"]
@@ -23,7 +23,7 @@ shape = SubResource("RectangleShape2D_wa3co")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 64
-collision_mask = 61
+collision_mask = 53
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_y7y2v")

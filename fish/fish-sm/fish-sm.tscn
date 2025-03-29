@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://bp0d6xqoonf2y"]
 
 [ext_resource type="Texture2D" uid="uid://m0ufdoqd7h1d" path="res://fish/fish-sm/fish-sm-bw.png" id="1_p6hax"]
-[ext_resource type="Script" path="res://fish/fish-sm/fish_sm.gd" id="1_x5031"]
-[ext_resource type="Script" path="res://fish/fish-sm/fish-sm-state-machine.gd" id="2_nwpfl"]
-[ext_resource type="Script" path="res://fish/fish-sm/states/fish-sm-cruise.gd" id="3_d6i8x"]
+[ext_resource type="Script" uid="uid://ia6bvav6cp8e" path="res://fish/fish-sm/fish_sm.gd" id="1_x5031"]
+[ext_resource type="Script" uid="uid://kjltrg5k1mxs" path="res://fish/fish-sm/fish-sm-state-machine.gd" id="2_nwpfl"]
+[ext_resource type="Script" uid="uid://cryxr5vqk3gke" path="res://fish/fish-sm/states/fish-sm-cruise.gd" id="3_d6i8x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bad6l"]
 radius = 6.08276
@@ -42,8 +42,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mo8i5"]
 _data = {
-"RESET": SubResource("Animation_8hh24"),
-"cruise": SubResource("Animation_5lwch")
+&"RESET": SubResource("Animation_8hh24"),
+&"cruise": SubResource("Animation_5lwch")
 }
 
 [node name="fish-sm" type="CharacterBody2D"]
@@ -60,7 +60,7 @@ hframes = 2
 
 [node name="animation" type="AnimationPlayer" parent="bw-fish-sprite"]
 libraries = {
-"": SubResource("AnimationLibrary_mo8i5")
+&"": SubResource("AnimationLibrary_mo8i5")
 }
 
 [node name="fish-sm-state-machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]

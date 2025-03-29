@@ -1,12 +1,12 @@
 [gd_scene load_steps=14 format=3 uid="uid://cvcuw6wh2kmbu"]
 
-[ext_resource type="Script" path="res://seagull/seagull.gd" id="1_3k0fv"]
+[ext_resource type="Script" uid="uid://ba4linhqmmlvw" path="res://seagull/seagull.gd" id="1_3k0fv"]
 [ext_resource type="Texture2D" uid="uid://btys3xeocorq2" path="res://seagull/gull.png" id="1_s47xc"]
-[ext_resource type="Script" path="res://seagull/seagull_state_machine.gd" id="3_faq3n"]
-[ext_resource type="Script" path="res://seagull/states/seagull_cruise.gd" id="4_dnhpj"]
-[ext_resource type="Script" path="res://seagull/states/seagull_land.gd" id="5_3lkhy"]
-[ext_resource type="Script" path="res://seagull/states/seagull_idle.gd" id="6_sa0ym"]
-[ext_resource type="Script" path="res://seagull/states/seagull_take_off.gd" id="7_qwwyv"]
+[ext_resource type="Script" uid="uid://p0o5tbilusyl" path="res://seagull/seagull_state_machine.gd" id="3_faq3n"]
+[ext_resource type="Script" uid="uid://cr32thqfcwwid" path="res://seagull/states/seagull_cruise.gd" id="4_dnhpj"]
+[ext_resource type="Script" uid="uid://cyt8upw7wigdt" path="res://seagull/states/seagull_land.gd" id="5_3lkhy"]
+[ext_resource type="Script" uid="uid://cykq1xkcpj1h5" path="res://seagull/states/seagull_idle.gd" id="6_sa0ym"]
+[ext_resource type="Script" uid="uid://cght2jcxjrk3h" path="res://seagull/states/seagull_take_off.gd" id="7_qwwyv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qth0d"]
 size = Vector2(12, 8)
@@ -78,14 +78,14 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x4ms0"]
 _data = {
-"cruising": SubResource("Animation_xn5e5"),
-"flap": SubResource("Animation_fq28j"),
-"idle": SubResource("Animation_niakj"),
-"take-off": SubResource("Animation_6a33c")
+&"cruising": SubResource("Animation_xn5e5"),
+&"flap": SubResource("Animation_fq28j"),
+&"idle": SubResource("Animation_niakj"),
+&"take-off": SubResource("Animation_6a33c")
 }
 
 [node name="gull" type="CharacterBody2D"]
-collision_layer = 9
+collision_layer = 8
 collision_mask = 7
 script = ExtResource("1_3k0fv")
 
@@ -101,7 +101,7 @@ frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="gull_animations"]
 libraries = {
-"": SubResource("AnimationLibrary_x4ms0")
+&"": SubResource("AnimationLibrary_x4ms0")
 }
 
 [node name="state_machine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]

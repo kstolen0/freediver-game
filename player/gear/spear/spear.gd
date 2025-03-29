@@ -21,6 +21,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("HIT")
+	if body.is_in_group("bird"):
+		return
 	if body.is_in_group("player"):
 		body.add_spears(1)
 		queue_free()

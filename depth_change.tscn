@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://bt5w1raislwja"]
 
-[ext_resource type="Script" path="res://depth_change.gd" id="1_45eup"]
+[ext_resource type="Script" uid="uid://c4ty2sikgwfq0" path="res://depth_change.gd" id="1_45eup"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubbql"]
 
 [node name="Node2D" type="Area2D"]
 scale = Vector2(90, 0.001)
+collision_layer = 9
 script = ExtResource("1_45eup")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

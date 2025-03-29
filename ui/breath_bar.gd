@@ -58,7 +58,7 @@ func on_final_breath(state):
 	
 func recoverBreath():
 	if value < MAX_BREATH / modifier:
-		if value > MAX_BREATH / modifier * 0.7:
+		if value > MAX_BREATH / modifier * 0.8:
 			value += 0.2
 		else:
 			value += 0.5

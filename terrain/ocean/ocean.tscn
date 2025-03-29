@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://c3ll8udtxwb5k"]
 
-[ext_resource type="Script" path="res://terrain/ocean/ocean.gd" id="1_xt8cg"]
-[ext_resource type="Shader" path="res://gradient_shader.gdshader" id="2_x8x3x"]
+[ext_resource type="Script" uid="uid://dy5edypk3lav1" path="res://terrain/ocean/ocean.gd" id="1_xt8cg"]
+[ext_resource type="Shader" uid="uid://4garwj4b6qp3" path="res://gradient_shader.gdshader" id="2_x8x3x"]
 [ext_resource type="Texture2D" uid="uid://dn3f1rmxeyoxv" path="res://ocean_gradient.tres" id="3_pekm6"]
-[ext_resource type="Script" path="res://terrain/ocean/shallows.gd" id="4_tb34c"]
+[ext_resource type="Script" uid="uid://cth0wj5botggb" path="res://terrain/ocean/shallows.gd" id="4_tb34c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0186f"]
 shader = ExtResource("2_x8x3x")
@@ -17,6 +17,7 @@ size = Vector2(33.1003, 20.5555)
 
 [node name="ocean" type="Area2D"]
 collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_xt8cg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
