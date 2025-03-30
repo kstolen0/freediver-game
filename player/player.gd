@@ -28,7 +28,7 @@ var depth = -1
 func _ready():
 	print("player loaded")
 	add_to_group("player")
-	$"../CanvasLayer/breath".out_of_breath.connect(unalive)
+	$"../UI/breath".out_of_breath.connect(unalive)
 	on_water.connect(under_water)
 	if player_spawn:
 		global_position = player_spawn.global_position

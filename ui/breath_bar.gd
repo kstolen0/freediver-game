@@ -8,6 +8,7 @@ var sent_death_signal = false
 signal out_of_breath(toggle)
 @onready var heart_beat: AudioStreamPlayer2D = $heart_beat
 @onready var veins: AudioStreamPlayer2D = $veins
+@onready var black_out: ColorRect = $"../black-out"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
