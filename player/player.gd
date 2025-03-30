@@ -12,6 +12,8 @@ var right_leg = leg_force
 var flip_flag = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var speargun: Area2D = $speargun
+@onready var player_spawn: Node2D = $"../player_spawn"
+
 
 signal holding_breath
 signal recovering_breath
@@ -28,6 +30,8 @@ func _ready():
 	add_to_group("player")
 	$"../CanvasLayer/breath".out_of_breath.connect(unalive)
 	on_water.connect(under_water)
+	if player_spawn:
+		global_position = player_spawn.global_position
 
 func under_water():
 	if depth > 0:
