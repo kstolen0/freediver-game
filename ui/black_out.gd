@@ -1,7 +1,5 @@
 extends ColorRect
 
-@onready var player: CharacterBody2D = $player
-
 func _ready():
 	$"../breath".connect("out_of_breath", toggleBlackOut)
 	
